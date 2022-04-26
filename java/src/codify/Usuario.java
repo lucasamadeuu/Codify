@@ -47,7 +47,7 @@ public class Usuario {
 
 			System.out.println("Nome: " + novo.getNome() + "\nEmail: " + novo.getEmail() + "\nTelefone: "
 					+ novo.getTelefone() + "\nSenha: " + novo.getSenha());
-			System.out.println("Cadastro concluído!");
+			System.out.println("------------------------------------------\nCadastro concluído!\n------------------------------------------");
 		}
 		
 	}
@@ -63,7 +63,7 @@ public class Usuario {
 		
 		System.out.println("Nome: " + altera.getNome() + "\nEmail: " + altera.getEmail() + "\nTelefone: "
 				+ altera.getTelefone() + "\nSenha: " + altera.getSenha());
-		System.out.println("Alteração concluída!");
+		System.out.println("------------------------------------------\nAlteração concluída!\n------------------------------------------");
 		
 	}
 	
@@ -75,7 +75,7 @@ public class Usuario {
 		exclui.setSenha(JOptionPane.showInputDialog("Excluindo objeto - Usuário \nDigite sua senha"));
 		
 		System.out.println("Email: " + exclui.getEmail() + "\nSenha: " + exclui.getSenha());
-		System.out.println("Exclusão de conta concluída!!");
+		System.out.println("------------------------------------------\nExclusão de conta concluída!\n------------------------------------------");
 		
 	}
 	
