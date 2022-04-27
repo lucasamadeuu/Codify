@@ -36,7 +36,7 @@ public class Usuario {
 	
 	void Cadastrar (String opcao) {
 		
-		if (opcao.equals("1") == true) {
+		if (opcao.equals("1")) {
 			Usuario novo;
 			novo = new Usuario();
 

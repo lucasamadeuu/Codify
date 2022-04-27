@@ -14,13 +14,13 @@ public class Main {
 		System.out.println("Sua escolha: ");
 		String escolha = a.next();
 
-		if (escolha.equals("1") == true) {
+		if (escolha.equals("1")) {
 			System.out.println("Programa encerrado");
 			a.close();
 			System.exit(0);
 		}
 
-		else if (escolha.equals("2") == true) {
+		else if (escolha.equals("2")) {
 			System.out.println("---------- Nova Pesquisa ----------");
 		}
 
@@ -35,22 +35,22 @@ public class Main {
 					"Bem-vindo ao codify! \nQual objeto você deseja criar? \n 1-Usuário \n 2-Administrador \n 3-Empresa \n 4-Processo Seletivo");
 
 			// USUÁRIO
-			if (opcao.equals("1") == true) {
+			if (opcao.equals("1")) {
 				Usuario user;
 				user = new Usuario();
 
 				String metodos = JOptionPane
 						.showInputDialog("Qual método você deseja usar? \n1-Cadastrar \n2-Alterar \n3-Excluir");
 
-				if (metodos.equals("1") == true) {
+				if (metodos.equals("1")) {
 					user.Cadastrar(opcao);
 				}
 
-				else if (metodos.equals("2") == true) {
+				else if (metodos.equals("2")) {
 					user.Alterar(opcao);
 				}
 
-				else if (metodos.equals("3") == true) {
+				else if (metodos.equals("3")) {
 					user.ExcluirConta(opcao);
 				}
 
@@ -63,7 +63,7 @@ public class Main {
 			}
 
 			// ADMINISTRADOR
-			else if (opcao.equals("2") == true) {
+			else if (opcao.equals("2")) {
 				Administrador admin;
 				admin = new Administrador();
 
@@ -78,15 +78,15 @@ public class Main {
 				String metodos = JOptionPane.showInputDialog(
 						"Qual método você deseja usar? \n1-Adicionar Conteúdo \n2-Alterar Conteúdo \n3-Excluir Conteúdo");
 
-				if (metodos.equals("1") == true) {
+				if (metodos.equals("1")) {
 					admin.AdicionarConteudo(opcao);
 				}
 
-				else if (metodos.equals("2") == true) {
+				else if (metodos.equals("2")) {
 					admin.AlterarConteudo(opcao);
 				}
 
-				else if (metodos.equals("3") == true) {
+				else if (metodos.equals("3")) {
 					admin.ExcluirConteudo(opcao);
 				}
 
@@ -99,7 +99,7 @@ public class Main {
 			}
 
 			// EMPRESA
-			else if (opcao.equals("3") == true) {
+			else if (opcao.equals("3")) {
 				Empresa empresa;
 				empresa = new Empresa();
 
@@ -115,7 +115,7 @@ public class Main {
 			}
 
 			// PROCESSO SELETIVO
-			else if (opcao.equals("4") == true) {
+			else if (opcao.equals("4")) {
 				ProcessoSeletivo processo;
 				processo = new ProcessoSeletivo();
 
