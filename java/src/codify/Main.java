@@ -135,6 +135,10 @@ public class Main {
 						+ "\n------------------------------------------");
 
 				Voltar();
+			}
+			
+			//TECNOLOGIA
+			else if (opcao.equals("5")) {
 				
 			}
 		}
