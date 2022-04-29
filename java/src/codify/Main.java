@@ -41,7 +41,7 @@ public class Main {
 				user = new Usuario();
 
 				String metodos = JOptionPane
-						.showInputDialog("Qual método você deseja usar? \n1-Cadastrar \n2-Alterar \n3-Excluir");
+						.showInputDialog("Qual método você deseja usar? \n1-Cadastrar \n2-Alterar \n3-Excluir \n4-Login");
 
 				if (metodos.equals("1")) {
 					user.Cadastrar(opcao);
@@ -53,6 +53,10 @@ public class Main {
 
 				else if (metodos.equals("3")) {
 					user.ExcluirConta(opcao);
+				}
+				
+				else if (metodos.equals("4")) {
+					user.LoginUser(opcao);
 				}
 
 				else {
@@ -77,7 +81,8 @@ public class Main {
 						+ "\nSenha admin: " + admin.getSenha() + "\nId admin: " + admin.getAdminID());
 
 				String metodos = JOptionPane.showInputDialog(
-						"Qual método você deseja usar? \n1-Adicionar Conteúdo \n2-Alterar Conteúdo \n3-Excluir Conteúdo");
+						"Qual método você deseja usar?"
+						+ "\n1-Adicionar Conteúdo \n2-Alterar Conteúdo \n3-Excluir Conteúdo \n4-Login");
 
 				if (metodos.equals("1")) {
 					admin.AdicionarConteudo(opcao);
@@ -89,6 +94,10 @@ public class Main {
 
 				else if (metodos.equals("3")) {
 					admin.ExcluirConteudo(opcao);
+				}
+				
+				else if (metodos.equals("4")) {
+					admin.LoginAdmin(opcao);
 				}
 
 				else {

@@ -110,5 +110,19 @@ public class Usuario {
 				"------------------------------------------\nExclusão de conta concluída!\n------------------------------------------");
 
 	}
+	
+	void LoginUser(String opcao) {
+		Usuario loginUser;
+		loginUser = new Usuario();
+		
+		loginUser.setEmail(JOptionPane.showInputDialog("Login - Usuário \nDigite seu email"));
+		loginUser.setSenha(JOptionPane.showInputDialog("Login - Usuário \nDigite sua senha"));
+		
+		System.out.println("Email: " + loginUser.getEmail() + "\nSenha: " + loginUser.getSenha());
+		System.out.println(
+				"------------------------------------------\nLogin Usuário concluído!\n------------------------------------------");
+
+		
+	}
 
 }
