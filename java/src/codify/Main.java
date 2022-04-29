@@ -32,7 +32,8 @@ public class Main {
 		while (voltar != 1) {
 
 			String opcao = JOptionPane.showInputDialog(
-					"Bem-vindo ao codify! \nQual objeto você deseja criar? \n 1-Usuário \n 2-Administrador \n 3-Empresa \n 4-Processo Seletivo");
+					"Bem-vindo ao codify! \nQual objeto você deseja criar? "
+					+ "\n 1-Usuário \n 2-Administrador \n 3-Empresa \n 4-Processo Seletivo \n 5 - Tecnologia");
 
 			// USUÁRIO
 			if (opcao.equals("1")) {
@@ -129,17 +130,27 @@ public class Main {
 				processo.redirecionarSite();
 
 				System.out.println("------------------------------------------\nNome empresa: "
-						+ processo.getNomeEmpresa() + "\nDescrição empresa: " + processo.getDescricaoEmpresa() + "Cargo: "
-						+ processo.getCargo() + "\nQuantidade vagas: " + processo.getQuantidadeVagas()
+						+ processo.getNomeEmpresa() + "\nDescrição empresa: " + processo.getDescricaoEmpresa()
+						+ "Cargo: " + processo.getCargo() + "\nQuantidade vagas: " + processo.getQuantidadeVagas()
 						+ "\nURL do site: " + processo.getEnderecoSite()
 						+ "\n------------------------------------------");
 
 				Voltar();
 			}
-			
-			//TECNOLOGIA
+
+			// TECNOLOGIA
 			else if (opcao.equals("5")) {
-				
+				Tecnologia tech;
+				tech = new Tecnologia();
+
+				tech.setNomeTecnologia(JOptionPane.showInputDialog("Tecnologia \nDigite o nome da tecnologia"));
+				tech.setTipoTecnologia(JOptionPane.showInputDialog("Tecnologia \nDigite o tipo de tecnologia"));
+
+				System.out.println("------------------------------------------\nNome tecnologia: "
+						+ tech.getNomeTecnologia() + "\nTipo tecnologia: " + tech.getTipoTecnologia()
+						+ "\n------------------------------------------");
+
+				Voltar();
 			}
 		}
 
