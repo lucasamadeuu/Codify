@@ -4,19 +4,35 @@ public class Empresa {
 	
 	private String nomeEmpresa;
 	private String descricaoEmpresa;
+	private String telefone;
+	private String email;
 	
-	public final String getNomeEmpresa() {
+	public String getNomeEmpresa() {
 		return nomeEmpresa;
 	}
-	public final void setNomeEmpresa(String nomeEmpresa) {
+	public void setNomeEmpresa(String nomeEmpresa) {
 		this.nomeEmpresa = nomeEmpresa;
 	}
-	public final String getDescricaoEmpresa() {
+	public String getDescricaoEmpresa() {
 		return descricaoEmpresa;
 	}
-	public final void setDescricaoEmpresa(String descricaoEmpresa) {
+	public void setDescricaoEmpresa(String descricaoEmpresa) {
 		this.descricaoEmpresa = descricaoEmpresa;
 	}
+	public String getTelefone() {
+		return telefone;
+	}
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
+	
 	
 
 }

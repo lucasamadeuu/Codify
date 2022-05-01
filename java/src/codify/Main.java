@@ -31,8 +31,7 @@ public class Main {
 		int voltar = 0;
 		while (voltar != 1) {
 
-			String opcao = JOptionPane.showInputDialog(
-					"Bem-vindo ao codify! \nQual objeto você deseja criar? "
+			String opcao = JOptionPane.showInputDialog("Bem-vindo ao codify! \nQual objeto você deseja criar? "
 					+ "\n 1-Usuário \n 2-Administrador \n 3-Empresa \n 4-Processo Seletivo \n 5 - Tecnologia");
 
 			// USUÁRIO
@@ -40,8 +39,8 @@ public class Main {
 				Usuario user;
 				user = new Usuario();
 
-				String metodos = JOptionPane
-						.showInputDialog("Qual método você deseja usar? \n1-Cadastrar \n2-Alterar \n3-Excluir \n4-Login");
+				String metodos = JOptionPane.showInputDialog(
+						"Qual método você deseja usar? \n1-Cadastrar \n2-Alterar \n3-Excluir \n4-Login");
 
 				if (metodos.equals("1")) {
 					user.Cadastrar(opcao);
@@ -54,7 +53,7 @@ public class Main {
 				else if (metodos.equals("3")) {
 					user.ExcluirConta(opcao);
 				}
-				
+
 				else if (metodos.equals("4")) {
 					user.LoginUser(opcao);
 				}
@@ -80,8 +79,7 @@ public class Main {
 				System.out.println("Nome admin: " + admin.getNome() + "\nEmail admin: " + admin.getEmail()
 						+ "\nSenha admin: " + admin.getSenha() + "\nId admin: " + admin.getAdminID());
 
-				String metodos = JOptionPane.showInputDialog(
-						"Qual método você deseja usar?"
+				String metodos = JOptionPane.showInputDialog("Qual método você deseja usar?"
 						+ "\n1-Adicionar Conteúdo \n2-Alterar Conteúdo \n3-Excluir Conteúdo \n4-Login");
 
 				if (metodos.equals("1")) {
@@ -95,7 +93,7 @@ public class Main {
 				else if (metodos.equals("3")) {
 					admin.ExcluirConteudo(opcao);
 				}
-				
+
 				else if (metodos.equals("4")) {
 					admin.LoginAdmin(opcao);
 				}
@@ -116,9 +114,12 @@ public class Main {
 				empresa.setNomeEmpresa(JOptionPane.showInputDialog("Empresa \nDigite o nome da empresa"));
 				empresa.setDescricaoEmpresa(
 						JOptionPane.showInputDialog("Empresa \nFaça uma breve descrição da empresa"));
+				empresa.setTelefone(JOptionPane.showInputDialog("Empresa \nDigite o telefone da empresa"));
+				empresa.setEmail(JOptionPane.showInputDialog("Empresa \nFaça uma breve descrição da empresa"));
 
 				System.out.println("------------------------------------------\nNome empresa: "
 						+ empresa.getNomeEmpresa() + "\nDescrição empresa: " + empresa.getDescricaoEmpresa()
+						+ "\nTelefone empresa: " + empresa.getTelefone() + "nEmail empresa: " + empresa.getEmail()
 						+ "\n------------------------------------------");
 
 				Voltar();

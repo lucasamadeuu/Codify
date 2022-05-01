@@ -5,15 +5,15 @@ import javax.swing.JOptionPane;
 public class Administrador extends Usuario{
 
 	private String adminID;
-
-	public final String getAdminID() {
+	
+	public String getAdminID() {
 		return adminID;
 	}
 
-	public final void setAdminID(String adminID) {
+	public void setAdminID(String adminID) {
 		this.adminID = adminID;
 	}
-	
+
 	void AdicionarConteudo(String opcao) {
 		System.out.println("------------------------------------------\nBem-vindo " + adminID + " aqui será para adicionar conteúdo!\n------------------------------------------");
 	}

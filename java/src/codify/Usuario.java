@@ -11,52 +11,52 @@ public class Usuario {
 	private String genero;
 	private String dataNascimento;
 
-	public final String getDataNascimento() {
-		return dataNascimento;
-	}
-
-	public final void setDataNascimento(String dataNascimento) {
-		this.dataNascimento = dataNascimento;
-	}
-
-	public final String getGenero() {
-		return genero;
-	}
-
-	public final void setGenero(String genero) {
-		this.genero = genero;
-	}
-
-	public final String getNome() {
+	public String getNome() {
 		return nome;
 	}
 
-	public final void setNome(String nome) {
+	public void setNome(String nome) {
 		this.nome = nome;
 	}
 
-	public final String getEmail() {
+	public String getEmail() {
 		return email;
 	}
 
-	public final void setEmail(String email) {
+	public void setEmail(String email) {
 		this.email = email;
 	}
 
-	public final String getTelefone() {
+	public String getTelefone() {
 		return telefone;
 	}
 
-	public final void setTelefone(String telefone) {
+	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
 
-	public final String getSenha() {
+	public String getSenha() {
 		return senha;
 	}
 
-	public final void setSenha(String senha) {
+	public void setSenha(String senha) {
 		this.senha = senha;
+	}
+
+	public String getGenero() {
+		return genero;
+	}
+
+	public void setGenero(String genero) {
+		this.genero = genero;
+	}
+
+	public String getDataNascimento() {
+		return dataNascimento;
+	}
+
+	public void setDataNascimento(String dataNascimento) {
+		this.dataNascimento = dataNascimento;
 	}
 
 	void Cadastrar(String opcao) {
