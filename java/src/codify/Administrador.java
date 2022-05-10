@@ -29,15 +29,15 @@ public class Administrador extends Usuario{
 	}
 	
 	void AdicionarConteudo(String opcao) {
-		System.out.println("------------------------------------------\nBem-vindo " + this.adminID + " aqui será para adicionar conteúdo!\n------------------------------------------");
+		System.out.println("Bem-vindo, aqui será para adicionar conteúdo!\n------------------------------------------");
 	}
 	
 	void ExcluirConteudo(String opcao) {
-		System.out.println("------------------------------------------\nBem-vindo " + this.adminID + " aqui será para excluir conteúdo!\n------------------------------------------");
+		System.out.println("Bem-vindo, aqui será para excluir conteúdo!\n------------------------------------------");
 	}
 	
 	void AlterarConteudo(String opcao) {
-		System.out.println("------------------------------------------\nBem-vindo " + this.adminID + " aqui será para alterar conteúdo!\n------------------------------------------");
+		System.out.println("Bem-vindo, aqui será para alterar conteúdo!\n------------------------------------------");
 	}
 	
 }
