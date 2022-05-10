@@ -32,7 +32,7 @@ public class Main {
 		while (voltar != 1) {
 
 			String opcao = JOptionPane.showInputDialog("Bem-vindo ao codify! \nQual objeto você deseja criar? "
-					+ "\n 1-Usuário \n 2-Administrador \n 3-Empresa \n 4-Quiz \n 5-Tecnologia");
+					+ "\n 1-Usuário \n 2-Administrador \n 3-Empresa \n 4-Quiz \n 5-Tecnologia \n 6-Curso");
 
 			// USUÁRIO
 			if (opcao.equals("1")) {
@@ -129,8 +129,8 @@ public class Main {
 				quiz.setTipoTecnologia(JOptionPane.showInputDialog("Quiz \nDigite o tipo de tecnologia"));
 
 				System.out.println("------------------------------------------\nNome do quiz: " + quiz.getNomeQuiz()
-						+ "\nTempo do quiz: " + quiz.getTempoQuiz() + "\nNome da tecnologia: " + quiz.getNomeTecnologia()
-						+ "\nTipo Tecnologia: " + quiz.getTipoTecnologia()
+						+ "\nTempo do quiz: " + quiz.getTempoQuiz() + "\nNome da tecnologia: "
+						+ quiz.getNomeTecnologia() + "\nTipo Tecnologia: " + quiz.getTipoTecnologia()
 						+ "\n------------------------------------------");
 
 				Voltar();
@@ -148,6 +148,26 @@ public class Main {
 						+ tech.getNomeTecnologia() + "\nTipo tecnologia: " + tech.getTipoTecnologia()
 						+ "\n------------------------------------------");
 
+				Voltar();
+			}
+
+			// CURSO
+			else if (opcao.equals("6")) {
+				Curso curso = new Curso();
+
+				curso.setNomeTecnologia(JOptionPane.showInputDialog("Curso \nDigite o nome da tecnologia"));
+				curso.setTipoTecnologia(JOptionPane.showInputDialog("Curso \nDigite o tipo de tecnologia"));
+				curso.setNomeCurso(JOptionPane.showInputDialog("Curso \nDigite o nome do curso"));
+				curso.setUrlCurso(JOptionPane.showInputDialog("Curso \nDigite a url do curso"));
+				curso.setNivelCurso(JOptionPane.showInputDialog("Curso \nDigite o nível do curso"));
+
+				System.out.println("------------------------------------------\nNome da tecnologia: "
+						+ curso.getNomeCurso() + "\nTipo tecnologia: " + curso.getTipoTecnologia() + "\nNome do curso: "
+						+ curso.getNomeCurso() + "\nURL do curso: " + curso.getUrlCurso() + "\nNível do curso: "
+						+ curso.getNivelCurso() + "\n------------------------------------------");
+				
+				curso.redirecionarCurso();
+				
 				Voltar();
 			}
 		}

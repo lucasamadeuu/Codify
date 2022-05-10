@@ -1,6 +1,6 @@
 package codify;
 
-public class Curso {
+public class Curso extends Tecnologia{
 
 	private String nomeCurso;
 	private String urlCurso;
@@ -31,7 +31,7 @@ public class Curso {
 	}
 
 	void redirecionarCurso(){
-		System.out.println("Voce será redirecionado para o curso escolhido.");
+		System.out.println("Voce será redirecionado para o curso escolhido." + "\n------------------------------------------");
 	}
 	
 }
