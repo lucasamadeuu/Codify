@@ -71,16 +71,10 @@ public class Main {
 				Administrador admin;
 				admin = new Administrador();
 
-				admin.setNome(JOptionPane.showInputDialog("Administrador \nDigite o seu nome"));
-				admin.setEmail(JOptionPane.showInputDialog("Administrador \nDigite o seu email"));
-				admin.setSenha(JOptionPane.showInputDialog("Administrador \nDigite a sua senha"));
-				admin.setAdminID(JOptionPane.showInputDialog("Administrador \nDigite o id do administrador"));
-
-				System.out.println("Nome admin: " + admin.getNome() + "\nEmail admin: " + admin.getEmail()
-						+ "\nSenha admin: " + admin.getSenha() + "\nId admin: " + admin.getAdminID());
+				admin.LoginAdmin(opcao);
 
 				String metodos = JOptionPane.showInputDialog("Qual método você deseja usar?"
-						+ "\n1-Adicionar Conteúdo \n2-Alterar Conteúdo \n3-Excluir Conteúdo \n4-Login");
+						+ "\n1-Adicionar Conteúdo \n2-Alterar Conteúdo \n3-Excluir Conteúdo");
 
 				if (metodos.equals("1")) {
 					admin.AdicionarConteudo(opcao);
@@ -92,10 +86,6 @@ public class Main {
 
 				else if (metodos.equals("3")) {
 					admin.ExcluirConteudo(opcao);
-				}
-
-				else if (metodos.equals("4")) {
-					admin.LoginAdmin(opcao);
 				}
 
 				else {
@@ -110,40 +100,23 @@ public class Main {
 			else if (opcao.equals("3")) {
 				Empresa empresa;
 				empresa = new Empresa();
+				
+				empresa.loginEmpresa();
 
-				empresa.setNomeEmpresa(JOptionPane.showInputDialog("Empresa \nDigite o nome da empresa"));
-				empresa.setDescricaoEmpresa(
-						JOptionPane.showInputDialog("Empresa \nFaça uma breve descrição da empresa"));
-				empresa.setTelefone(JOptionPane.showInputDialog("Empresa \nDigite o telefone da empresa"));
-				empresa.setEmail(JOptionPane.showInputDialog("Empresa \nFaça uma breve descrição da empresa"));
-
-				System.out.println("------------------------------------------\nNome empresa: "
-						+ empresa.getNomeEmpresa() + "\nDescrição empresa: " + empresa.getDescricaoEmpresa()
-						+ "\nTelefone empresa: " + empresa.getTelefone() + "nEmail empresa: " + empresa.getEmail()
-						+ "\n------------------------------------------");
-
-				Voltar();
-			}
-
-			// PROCESSO SELETIVO
-			else if (opcao.equals("4")) {
-				ProcessoSeletivo processo;
-				processo = new ProcessoSeletivo();
-
-				processo.setNomeEmpresa(JOptionPane.showInputDialog("Processo Seletivo \nDigite o nome da empresa"));
-				processo.setDescricaoEmpresa(
-						JOptionPane.showInputDialog("Processo Seletivo \nFaça uma breve descrição da empresa"));
-				processo.setCargo(JOptionPane.showInputDialog("Processo Seletivo \nDigite o cargo"));
-				String quantidade = JOptionPane.showInputDialog("Processo Seletivo \nDigite a quantidade de vagas");
-				processo.setQuantidadeVagas((int) Double.parseDouble(quantidade));
-				processo.setEnderecoSite(JOptionPane.showInputDialog("Processo seletivo \nDigite a URL do site"));
-				processo.redirecionarSite();
-
-				System.out.println("------------------------------------------\nNome empresa: "
-						+ processo.getNomeEmpresa() + "\nDescrição empresa: " + processo.getDescricaoEmpresa()
-						+ "Cargo: " + processo.getCargo() + "\nQuantidade vagas: " + processo.getQuantidadeVagas()
-						+ "\nURL do site: " + processo.getEnderecoSite()
-						+ "\n------------------------------------------");
+				String metodos = JOptionPane.showInputDialog("Qual método você deseja usar?"
+						+ "\n1-Filtrar Usuários \n2-Visualizar Usuários");
+				
+				if (metodos.equals("1")) {
+					empresa.filtrarUsers();
+				}
+				
+				else if (metodos.equals("2")) {
+					empresa.visualizarUsers();
+				}
+				
+				else {
+					System.out.println("Opção Inválida!");
+				}
 
 				Voltar();
 			}

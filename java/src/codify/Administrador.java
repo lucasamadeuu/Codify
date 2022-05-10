@@ -14,18 +14,6 @@ public class Administrador extends Usuario{
 		this.adminID = adminID;
 	}
 
-	void AdicionarConteudo(String opcao) {
-		System.out.println("------------------------------------------\nBem-vindo " + adminID + " aqui será para adicionar conteúdo!\n------------------------------------------");
-	}
-	
-	void ExcluirConteudo(String opcao) {
-		System.out.println("------------------------------------------\nBem-vindo " + adminID + " aqui será para excluir conteúdo!\n------------------------------------------");
-	}
-	
-	void AlterarConteudo(String opcao) {
-		System.out.println("------------------------------------------\nBem-vindo " + adminID + " aqui será para alterar conteúdo!\n------------------------------------------");
-	}
-	
 	void LoginAdmin(String opcao) {
 		Administrador loginAdm;
 		loginAdm = new Administrador();
@@ -34,10 +22,22 @@ public class Administrador extends Usuario{
 		loginAdm.setSenha(JOptionPane.showInputDialog("Login - Admin \nDigite sua senha"));
 		
 
-		System.out.println("Email: " + loginAdm.getEmail() + "\nSenha: " + loginAdm.getSenha());
+		System.out.println("ID Admin: " + loginAdm.getAdminID() + "\nSenha: " + loginAdm.getSenha());
 		System.out.println(
 				"------------------------------------------\nLogin Administrador concluído!\n------------------------------------------");
 
+	}
+	
+	void AdicionarConteudo(String opcao) {
+		System.out.println("------------------------------------------\nBem-vindo " + this.adminID + " aqui será para adicionar conteúdo!\n------------------------------------------");
+	}
+	
+	void ExcluirConteudo(String opcao) {
+		System.out.println("------------------------------------------\nBem-vindo " + this.adminID + " aqui será para excluir conteúdo!\n------------------------------------------");
+	}
+	
+	void AlterarConteudo(String opcao) {
+		System.out.println("------------------------------------------\nBem-vindo " + this.adminID + " aqui será para alterar conteúdo!\n------------------------------------------");
 	}
 	
 }

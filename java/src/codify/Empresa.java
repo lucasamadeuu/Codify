@@ -1,38 +1,38 @@
 package codify;
 
-public class Empresa {
-	
-	private String nomeEmpresa;
-	private String descricaoEmpresa;
-	private String telefone;
-	private String email;
-	
-	public String getNomeEmpresa() {
-		return nomeEmpresa;
-	}
-	public void setNomeEmpresa(String nomeEmpresa) {
-		this.nomeEmpresa = nomeEmpresa;
-	}
-	public String getDescricaoEmpresa() {
-		return descricaoEmpresa;
-	}
-	public void setDescricaoEmpresa(String descricaoEmpresa) {
-		this.descricaoEmpresa = descricaoEmpresa;
-	}
-	public String getTelefone() {
-		return telefone;
-	}
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	
-	
-	
+import javax.swing.JOptionPane;
 
-}
+public class Empresa extends Usuario{
+		
+		private String empresaId;
+
+		public String getEmpresaId() {
+			return empresaId;
+		}
+
+		public void setEmpresaId(String empresaId) {
+			this.empresaId = empresaId;
+		}
+		
+		void loginEmpresa() {
+			
+			Empresa logar = new Empresa();
+			
+			logar.setEmpresaId(JOptionPane.showInputDialog("Login - Empresa \nDigite seu ID"));
+			logar.setSenha(JOptionPane.showInputDialog("Login - Empresa \nDigite sua senha"));
+			
+			System.out.println("ID Empresa: " + logar.getEmpresaId() + "\nSenha: " + logar.getSenha());
+			System.out.println(
+					"------------------------------------------\nLogin Empresa concluído!\n------------------------------------------");
+			
+		}
+		
+		void filtrarUsers() {
+			System.out.println("Aqui será para a empresa filtrar os usuários!\n------------------------------------------");
+		}
+		
+		void visualizarUsers() {
+			System.out.println("Aqui será para a empresa visualizar os usuários!\n------------------------------------------");
+		}
+	
+	}
