@@ -32,12 +32,11 @@ public class Main {
 		while (voltar != 1) {
 
 			String opcao = JOptionPane.showInputDialog("Bem-vindo ao codify! \nQual objeto você deseja criar? "
-					+ "\n 1-Usuário \n 2-Administrador \n 3-Empresa \n 4-Processo Seletivo \n 5 - Tecnologia");
+					+ "\n 1-Usuário \n 2-Administrador \n 3-Empresa \n 4-Quiz \n 5-Tecnologia");
 
 			// USUÁRIO
 			if (opcao.equals("1")) {
-				Usuario user;
-				user = new Usuario();
+				Usuario user = new Usuario();
 
 				String metodos = JOptionPane.showInputDialog(
 						"Qual método você deseja usar? \n1-Cadastrar \n2-Alterar \n3-Excluir \n4-Login");
@@ -68,8 +67,7 @@ public class Main {
 
 			// ADMINISTRADOR
 			else if (opcao.equals("2")) {
-				Administrador admin;
-				admin = new Administrador();
+				Administrador admin = new Administrador();
 
 				admin.LoginAdmin(opcao);
 
@@ -98,22 +96,21 @@ public class Main {
 
 			// EMPRESA
 			else if (opcao.equals("3")) {
-				Empresa empresa;
-				empresa = new Empresa();
-				
+				Empresa empresa = new Empresa();
+
 				empresa.loginEmpresa();
 
-				String metodos = JOptionPane.showInputDialog("Qual método você deseja usar?"
-						+ "\n1-Filtrar Usuários \n2-Visualizar Usuários");
-				
+				String metodos = JOptionPane.showInputDialog(
+						"Qual método você deseja usar?" + "\n1-Filtrar Usuários \n2-Visualizar Usuários");
+
 				if (metodos.equals("1")) {
 					empresa.filtrarUsers();
 				}
-				
+
 				else if (metodos.equals("2")) {
 					empresa.visualizarUsers();
 				}
-				
+
 				else {
 					System.out.println("Opção Inválida!");
 				}
@@ -121,10 +118,28 @@ public class Main {
 				Voltar();
 			}
 
+			// QUIZ
+			else if (opcao.equals("4")) {
+				Quiz quiz = new Quiz();
+
+				quiz.setNomeQuiz(JOptionPane.showInputDialog("Quiz \nDigite o nome do quiz"));
+				String tempo = JOptionPane.showInputDialog("Quiz \nDigite o tempo do quiz");
+				quiz.setTempoQuiz((int) Double.parseDouble(tempo));
+				quiz.setNomeTecnologia(JOptionPane.showInputDialog("Quiz \nDigite o nome da tecnologia"));
+				quiz.setTipoTecnologia(JOptionPane.showInputDialog("Quiz \nDigite o tipo de tecnologia"));
+
+				System.out.println("------------------------------------------\nNome do quiz: " + quiz.getNomeQuiz()
+						+ "\nTempo do quiz: " + quiz.getTempoQuiz() + "\nNome da tecnologia: " + quiz.getNomeTecnologia()
+						+ "\nTipo Tecnologia: " + quiz.getTipoTecnologia()
+						+ "\n------------------------------------------");
+
+				Voltar();
+
+			}
+
 			// TECNOLOGIA
 			else if (opcao.equals("5")) {
-				Tecnologia tech;
-				tech = new Tecnologia();
+				Tecnologia tech = new Tecnologia();
 
 				tech.setNomeTecnologia(JOptionPane.showInputDialog("Tecnologia \nDigite o nome da tecnologia"));
 				tech.setTipoTecnologia(JOptionPane.showInputDialog("Tecnologia \nDigite o tipo de tecnologia"));
