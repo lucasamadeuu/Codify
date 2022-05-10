@@ -10,6 +10,51 @@ public class Usuario {
 	private String senha;
 	private String genero;
 	private String dataNascimento;
+	private int CEP;
+	private String logradouro;
+	private String bairro;
+	private String cidade;
+	private String estado;
+
+	public int getCEP() {
+		return CEP;
+	}
+
+	public void setCEP(int cEP) {
+		CEP = cEP;
+	}
+
+	public String getLogradouro() {
+		return logradouro;
+	}
+
+	public void setLogradouro(String logradouro) {
+		this.logradouro = logradouro;
+	}
+
+	public String getBairro() {
+		return bairro;
+	}
+
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
+	}
+
+	public String getCidade() {
+		return cidade;
+	}
+
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
 
 	public String getNome() {
 		return nome;
@@ -72,10 +117,18 @@ public class Usuario {
 			novo.setGenero(JOptionPane.showInputDialog("Criando objeto - Usuário \nDigite seu gênero"));
 			novo.setDataNascimento(
 					JOptionPane.showInputDialog("Criando objeto - Usuário \nDigite sua data de nascimento"));
+			String cep = JOptionPane.showInputDialog("Criando objeto - Usuário \nDigite seu cep");
+			novo.setCEP((int) Double.parseDouble(cep));
+			novo.setLogradouro(JOptionPane.showInputDialog("Criando objeto - Usuário \nDigite seu logradouro"));
+			novo.setBairro(JOptionPane.showInputDialog("Criando objeto - Usuário \nDigite seu bairro"));
+			novo.setCidade(JOptionPane.showInputDialog("Criando objeto - Usuário \nDigite sua cidade"));
+			novo.setEstado(JOptionPane.showInputDialog("Criando objeto - Usuário \nDigite seu estado"));
 
 			System.out.println("Nome: " + novo.getNome() + "\nEmail: " + novo.getEmail() + "\nTelefone: "
 					+ novo.getTelefone() + "\nSenha: " + novo.getSenha() + "\nGênero: " + novo.getGenero()
-					+ "\nData de Nascimento: " + novo.getDataNascimento());
+					+ "\nData de Nascimento: " + novo.getDataNascimento() + "\nCEP: " + novo.getCEP() + "\nLogradouro: "
+					+ novo.getLogradouro() + "\nBairro: " + novo.getBairro() + "\nCidade: " + novo.getCidade()
+					+ "\nEstado: " + novo.getEstado());
 			System.out.println(
 					"------------------------------------------\nCadastro concluído!\n------------------------------------------");
 		}
@@ -110,19 +163,18 @@ public class Usuario {
 				"------------------------------------------\nExclusão de conta concluída!\n------------------------------------------");
 
 	}
-	
+
 	void LoginUser(String opcao) {
 		Usuario loginUser;
 		loginUser = new Usuario();
-		
+
 		loginUser.setEmail(JOptionPane.showInputDialog("Login - Usuário \nDigite seu email"));
 		loginUser.setSenha(JOptionPane.showInputDialog("Login - Usuário \nDigite sua senha"));
-		
+
 		System.out.println("Email: " + loginUser.getEmail() + "\nSenha: " + loginUser.getSenha());
 		System.out.println(
 				"------------------------------------------\nLogin Usuário concluído!\n------------------------------------------");
 
-		
 	}
 
 }
