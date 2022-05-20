@@ -1,10 +1,9 @@
 package codify;
 
-public class AvaliacaoTecnica {
+public class TestePratico {
 	
 	private String titulo;
 	private String descricaoTeste;
-	private int tempoTeste;
 	private String dificuldade;
 
 	public String getTitulo() {
@@ -21,14 +20,6 @@ public class AvaliacaoTecnica {
 
 	public void setDescricaoTeste(String descricaoTeste) {
 		this.descricaoTeste = descricaoTeste;
-	}
-
-	public int getTempoTeste() {
-		return tempoTeste;
-	}
-
-	public void setTempoTeste(int tempoTeste) {
-		this.tempoTeste = tempoTeste;
 	}
 
 	public String getDificuldade() {

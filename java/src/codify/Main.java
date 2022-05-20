@@ -120,18 +120,16 @@ public class Main {
 
 			// QUIZ
 			else if (opcao.equals("4")) {
-				Quiz quiz = new Quiz();
+				TesteTeorico quiz = new TesteTeorico();
 
 				quiz.setNomeQuiz(JOptionPane.showInputDialog("Quiz \nDigite o nome do quiz"));
 				String tempo = JOptionPane.showInputDialog("Quiz \nDigite o tempo do quiz");
 				quiz.setTempoQuiz((int) Double.parseDouble(tempo));
 				quiz.setNomeTecnologia(JOptionPane.showInputDialog("Quiz \nDigite o nome da tecnologia"));
-				quiz.setTipoTecnologia(JOptionPane.showInputDialog("Quiz \nDigite o tipo de tecnologia"));
 
 				System.out.println("------------------------------------------\nNome do quiz: " + quiz.getNomeQuiz()
 						+ "\nTempo do quiz: " + quiz.getTempoQuiz() + "\nNome da tecnologia: "
-						+ quiz.getNomeTecnologia() + "\nTipo Tecnologia: " + quiz.getTipoTecnologia()
-						+ "\n------------------------------------------");
+						+ quiz.getNomeTecnologia() + "\n------------------------------------------");
 
 				Voltar();
 
@@ -142,10 +140,10 @@ public class Main {
 				Tecnologia tech = new Tecnologia();
 
 				tech.setNomeTecnologia(JOptionPane.showInputDialog("Tecnologia \nDigite o nome da tecnologia"));
-				tech.setTipoTecnologia(JOptionPane.showInputDialog("Tecnologia \nDigite o tipo de tecnologia"));
+				tech.setNome(JOptionPane.showInputDialog("Tecnologia \nDigite o nome da área de atuação"));
 
 				System.out.println("------------------------------------------\nNome tecnologia: "
-						+ tech.getNomeTecnologia() + "\nTipo tecnologia: " + tech.getTipoTecnologia()
+						+ tech.getNomeTecnologia() + "\nTipo tecnologia: " + tech.getNome()
 						+ "\n------------------------------------------");
 
 				Voltar();
@@ -156,18 +154,17 @@ public class Main {
 				Curso curso = new Curso();
 
 				curso.setNomeTecnologia(JOptionPane.showInputDialog("Curso \nDigite o nome da tecnologia"));
-				curso.setTipoTecnologia(JOptionPane.showInputDialog("Curso \nDigite o tipo de tecnologia"));
 				curso.setNomeCurso(JOptionPane.showInputDialog("Curso \nDigite o nome do curso"));
 				curso.setUrlCurso(JOptionPane.showInputDialog("Curso \nDigite a url do curso"));
 				curso.setNivelCurso(JOptionPane.showInputDialog("Curso \nDigite o nível do curso"));
 
 				System.out.println("------------------------------------------\nNome da tecnologia: "
-						+ curso.getNomeCurso() + "\nTipo tecnologia: " + curso.getTipoTecnologia() + "\nNome do curso: "
-						+ curso.getNomeCurso() + "\nURL do curso: " + curso.getUrlCurso() + "\nNível do curso: "
-						+ curso.getNivelCurso() + "\n------------------------------------------");
-				
+						+ curso.getNomeCurso() + "\nNome do curso: " + curso.getNomeCurso() + "\nURL do curso: "
+						+ curso.getUrlCurso() + "\nNível do curso: " + curso.getNivelCurso()
+						+ "\n------------------------------------------");
+
 				curso.redirecionarCurso();
-				
+
 				Voltar();
 			}
 		}

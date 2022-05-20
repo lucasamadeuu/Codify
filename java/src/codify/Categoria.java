@@ -1,6 +1,6 @@
 package codify;
 
-public class AreaAtuacao {
+public class Categoria {
 	
 	private String codigoArea;
 	private String nome;

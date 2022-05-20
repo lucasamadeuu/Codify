@@ -1,6 +1,6 @@
 package codify;
 
-public class Quiz extends Tecnologia{
+public class TesteTeorico extends Tecnologia{
 	
 	private String nomeQuiz;
 	private int tempoQuiz;
